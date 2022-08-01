@@ -22,7 +22,7 @@ const Dog: NextPage<{ name: string }> = ({ name }) => {
         {data?.dog?.name}
       </Title>
       {data?.dog?.description.map((d) => (
-        <Text dangerouslySetInnerHTML={{ __html: d }} />
+        <Text key={d} dangerouslySetInnerHTML={{ __html: d }} />
       ))}
 
       <Text my={5}>
